@@ -2,7 +2,7 @@ import store from './store/configureStore'
 // import {addTask, removeTask,completeTask} from './store/tasks'
 import {addEmployee, removeEmployee} from './store/employees'
 
-store.dispatch(addEmployee({name: "Pete Smith"}))
+// store.dispatch(addEmployee({name: "Pete Smith"}))
 // const unsubscribe = store.subscribe(()=>{
 // 	console.log("updated", store.getState())
 // })
@@ -16,3 +16,4 @@ store.dispatch(addEmployee({name: "Pete Smith"}))
 
 // store.dispatch(removeTask({id:1}))
 // console.log(store.getState())
+store.dispatch({type:"SHOW_ERROR", payload:{error:"User not found"}})
